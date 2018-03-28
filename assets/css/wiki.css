@@ -1,7 +1,54 @@
 body {
     background-color: #007900;
+    font-family: "Montserrat";
+}
+h1 {
+    color: rgba(255, 255, 255, .8)
+}
+.container{
+    /* background-color: #005a00; */
+    padding: 20px;
+    margin: 20px auto;
+}
+.container div{
+    padding: 20px;
+    margin: 20px auto;
+    width: 360px;
+    text-align: center;
+}
+#search {
+    background-color: #004d00;
+}
+.container div input {
+    width: 300px;
+    margin: 10px auto;
+    outline: none;
+    border: none;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, .9);
+}
+#content ul li {
+    padding: 10px;
+    background-color: #004d00;
+    margin: 2px;
+}
+button {
+    background-color: rgba(0, 255, 0, .2);
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-family: inherit;
+    color: rgba(255, 255, 255, .7)
+}
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, .5);
+}
+ul {
+    padding: 0;
 }
 
-#random{
-    display: block;
+li {
+    list-style: none;
+
 }
