@@ -2,16 +2,31 @@
 <html lang="en">
 <head>
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/wiki.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/wiki.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+    <script src="assets/js/wiki.js"></script>
+    
+    
 </head>
 <body>
     <div class="container">    
         <div id="search">
             <h1>wiki search</h1>
-            <input type="text"> 
-            <button id="random" href="https://en.wikipedia.org/wiki/Special:Random">Random Page</button>
-            <button id="searchBtn">Search</button>
+                
+                <div class="ui-widget">
+                    <label for="title"></label>
+                    <input id ="title">
+                </div>
+            
+            <button id="searchBtn">Search</button> 
+            <a href="https://en.wikipedia.org/wiki/Special:Random" target ="_blank"><button id="random" >Random Page</button></a>
+            
         </div>
         <div id="content">
             <ul>
@@ -19,7 +34,6 @@
             </ul>
         </div>
     </div>    
-    <script src="assets/js/lib/jquery-3.3.1.min.js"></script>
-    <script src="assets/js/wiki.js"></script>
+    
 </body>
 </html>
