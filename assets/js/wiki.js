@@ -2,8 +2,6 @@ $(document).ready(function(){
     
     $("input[type='text']").keypress(function(event){
         $searchText = $(this).val();
-         // $(this).val("");
-         
         if($searchText.length > 0){
             searchWiki($searchText);
             $("li").remove();
@@ -35,9 +33,6 @@ $(document).ready(function(){
                     $("#content > ul").append("<a href=https://en.wikipedia.org/wiki/"+ query[i].title.replace(/ /g, "_") +" target='_blank'><li><h4>" + query[i].title + "</h4><p>" + query[i].terms.description + "</p></li></a>");
                     
                 }
-                // for(var i = 0; i < query.length; i++){
-                //     $("ul").append("<li>" + query[i].title + "</li>");
-                // }
             }
         );
     }
