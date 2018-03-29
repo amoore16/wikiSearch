@@ -1,15 +1,22 @@
 body {
-    background-color: #007000;
+    background-color: #005000;
     font-family: 'Montserrat';
 }
 .container {
     width: 500px;
     margin: 5px auto;
+    padding: 100px;
+    background: #003300;
+    border-radius: 10px;
 }
 #search {
     width: 420px;
     margin: 0px auto;
     text-align: center;
+    background-color: #007000;
+    border-radius: 10px;
+    padding: 10px 10px 30px 10px;
+    box-shadow: 10px 10px #004000;
 }
 button {
     font-family: inherit;
@@ -17,11 +24,47 @@ button {
     color: rgba(0, 0, 0 , 0.8);
     background-color: rgba(0, 0, 0, 0.0);
     margin: 5px;
+    padding: 5px;
     outline: none;
-    border: 2px outset rgba(0, 50, 0, .8);
+    border: 2px solid;
+    border-radius: 10px;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+}
+button:hover{
+    top: 3px;
 }
 input {
-    background-color: rgba(0, 50, 0, 0.0);
+    background-color: rgba(0, 70, 0, 0.0);
     border-style: solid;
     outline: none;
+    border-radius: 10px;
+    padding: 5px;
+}
+a {
+    text-decoration: none;
+}
+#content {
+    margin: 0px auto;
+    padding: 10px;
+}
+
+#content ul {
+    padding: 0px;
+}
+#content li {
+    background-color:#007000;
+    padding: 10px;
+    margin: 5px;
+    list-style: none;
+    color: rgba(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: 10px 10px #004000;
+    position: relative;
+    top: 0;
+    transition: top ease 0.2s;
+}
+#content li:hover {
+    top: -3px;
 }
