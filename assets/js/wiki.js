@@ -5,7 +5,6 @@ $(document).ready(function(){
         if($searchText.length > 0){
             searchWiki($searchText);
             $("li").remove();
-            $("li ")   
         }
     });
     function searchWiki(search){
