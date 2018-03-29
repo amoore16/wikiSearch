@@ -27,10 +27,10 @@ $(document).ready(function(){
             },
             function(json){
                 var query = json.query.pages;
-                console.log(query);
+                console.log(json);
                 for(var i = 0; i < query.length; i++){
                     $("#content > ul").append("<a href=https://en.wikipedia.org/wiki/"+ query[i].title.replace(/ /g, "_") +" target='_blank'><li><h4>" + query[i].title + "</h4><p>" + query[i].terms.description + "</p></li></a>");
-                    
+                    //add conditional for displaying description 
                 }
             }
         );
