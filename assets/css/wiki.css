@@ -1,19 +1,21 @@
 body {
-    background-color: #005000;
+    background-color: #fff;
     font-family: 'Montserrat';
+    color: #040;
 }
 .container {
-    width: 500px;
+    width: 800px;
     margin: 5px auto;
     padding: 100px;
-    background: #003300;
+    /* background: #003300; */
     border-radius: 10px;
 }
 #search {
-    width: 420px;
+    width: 600px;
     margin: 0px auto;
     text-align: center;
-    background-color: #007000;
+    background-color: #fff;
+    border: solid 5px #004000;
     border-radius: 10px;
     padding: 10px 10px 30px 10px;
     box-shadow: 10px 10px #004000;
@@ -21,8 +23,8 @@ body {
 button {
     font-family: inherit;
     font-weight: 700;
-    color: rgba(0, 0, 0 , 0.8);
-    background-color: rgba(0, 0, 0, 0.0);
+    color: #040;
+    background-color: rgba(255, 255, 255, 0.0);
     margin: 5px;
     padding: 5px;
     outline: none;
@@ -36,8 +38,9 @@ button:hover{
     top: 3px;
 }
 input {
-    background-color: rgba(0, 70, 0, 0.0);
-    border-style: solid;
+    background-color: rgba(255, 255, 255, 1);
+    border: solid #040;
+    color: #040;
     outline: none;
     border-radius: 10px;
     padding: 5px;
@@ -54,17 +57,31 @@ a {
     padding: 0px;
 }
 #content li {
-    background-color:#007000;
+    background-color:#ffffff;
     padding: 10px;
     margin: 5px;
     list-style: none;
-    color: rgba(0, 0, 0);
+    color: #040;
+    border: 2px solid #040;
     border-radius: 10px;
     box-shadow: 10px 10px #004000;
-    position: relative;
+    /* position: relative;
     top: 0;
-    transition: top ease 0.2s;
+    transition: top ease 0.2s; */
 }
-#content li:hover {
+/* #content li:hover {
     top: -3px;
+} */
+
+#content li p {
+    height: 0px;
+    opacity: 0;
+    transition: 0.2s linear;
+    margin: 0;
+}
+
+#content li:hover p{
+    height: auto;
+    opacity: 1;
+    margin: 10px;
 }

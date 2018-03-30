@@ -41,7 +41,6 @@ $(document).ready(function(){
     });
     $("#searchBtn").on('click', function(){
         $searchText = $("#title").val();
-        console.log($searchText);
         $("#title").val("");
         $("#content > ul").empty();
         apiSearch($searchText);
@@ -69,7 +68,7 @@ $(document).ready(function(){
             function (json) {
                 var query = json.query.pages;
                 for (var i = 0; i < query.length; i++){
-                    $("#content > ul").append("<a href='https://en.wikipedia.org/wiki/"+ query[i].title.replace(/ /g,'_') + "' target='_blank'><li>" + query[i].title + "</li></a>")
+                    $("#content > ul").append("<a href='https://en.wikipedia.org/wiki/"+ query[i].title.replace(/ /g,'_') + "' target='_blank'><li><h2>" + query[i].title + "</h2><p>" + query[i].terms.description + "</p></li></a>");
                 }
             }
         )
