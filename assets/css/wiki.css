@@ -1,7 +1,11 @@
 body {
-    background-color: #fff;
+    background-color: rgb(25, 145, 170);
     font-family: 'Montserrat';
     color: #040;
+    position: relative;
+}
+html {
+    height: 100%;
 }
 .container {
     width: 800px;
@@ -84,4 +88,22 @@ a {
     height: auto;
     opacity: 1;
     margin: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top: 5px solid #fff;
+    text-align: center;
+    padding-top: 10px;
+    color: #fff;
+    height: 0px;
+    width: 100%;
+    background-color: #040;
+    transition: .5s linear;
+}
+
+footer:hover{
+    height: 30px;
 }
