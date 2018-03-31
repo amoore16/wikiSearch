@@ -8,14 +8,14 @@ html {
     height: 100%;
 }
 .container {
-    width: 800px;
-    margin: 5px auto;
-    padding: 100px;
+    width: 80%;
+    margin: 1% auto;
+    padding: 1%;
     /* background: #003300; */
     border-radius: 10px;
 }
 #search {
-    width: 600px;
+    width: 60%;
     margin: 0px auto;
     text-align: center;
     background-color: #fff;
@@ -54,7 +54,7 @@ a {
 }
 #content {
     margin: 0px auto;
-    padding: 10px;
+    padding: 10%;
 }
 
 #content ul {
@@ -62,8 +62,8 @@ a {
 }
 #content li {
     background-color:#ffffff;
-    padding: 10px;
-    margin: 5px;
+    padding: 2%;
+    margin: 1%;
     list-style: none;
     color: #040;
     border: 2px solid #040;
@@ -106,4 +106,16 @@ footer {
 
 footer:hover{
     height: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0%;
+    }
+
+    #search {
+        width: 100%;
+        margin-left: -2%;
+    }
 }
