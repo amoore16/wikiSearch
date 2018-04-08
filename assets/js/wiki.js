@@ -31,7 +31,7 @@ $(document).ready(function(){
             )
         }
     });
-    
+
     $("#title").keypress(function(event){
         if(event.which === 13){
             var $searchText = $(this).val();
