@@ -1,24 +1,25 @@
 $(document).ready(function(){
-    
+    var wikiAPI = "https://en.wikipedia.org/w/api.php";
+    var requestData = {
+        "action": "query",
+        "format": "json",
+        "origin": "*",
+        "prop": "pageimages|pageterms",
+        "generator": "prefixsearch",
+        "redirects": 1,
+        "formatversion": "2",
+        "piprop": "thumbnail",
+        "pithumbsize": "50",
+        "pilimit": "10",
+        "wbptterms": "description",
+        "gpslimit": "10"
+    }
+
     $("#title").autocomplete({
         source: function(request, response) {
-            var wikiAPI = "https://en.wikipedia.org/w/api.php";
-            $.getJSON(wikiAPI, 
-                {
-                    "action": "query",
-                    "format": "json",
-                    "origin": "*",
-                    "prop": "pageimages|pageterms",
-                    "generator": "prefixsearch",
-                    "redirects": 1,
-                    "formatversion": "2",
-                    "piprop": "thumbnail",
-                    "pithumbsize": "50",
-                    "pilimit": "10",
-                    "wbptterms": "description",
-                    "gpssearch": request.term,
-                    "gpslimit": "10"
-                },
+            
+            requestData.gpssearch = request.term;
+            $.getJSON(wikiAPI, requestData,
                 function(json){
                     var query = json.query.pages;
                     var srchArr = [];
@@ -48,23 +49,9 @@ $(document).ready(function(){
 
 
     function apiSearch(search){
-        var wikiAPI = "https://en.wikipedia.org/w/api.php";
-        $.getJSON(wikiAPI,
-            {
-                "action": "query",
-                "format": "json",
-                "origin": "*",
-                "prop": "pageimages|pageterms",
-                "generator": "prefixsearch",
-                "redirects": 1,
-                "formatversion": "2",
-                "piprop": "thumbnail",
-                "pithumbsize": "50",
-                "pilimit": "10",
-                "wbptterms": "description",
-                "gpssearch": search,
-                "gpslimit": "10"  
-            },
+        requestData.gpssearch = search;
+       
+        $.getJSON(wikiAPI, requestData,
             function (json) {
                 var query = json.query.pages;
                 for (var i = 0; i < query.length; i++){
